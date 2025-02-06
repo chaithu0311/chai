@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday</title>
+    <style>
+         
+           
+        
+        #birthdayImage {
+            display: none; /* Initially hide the image */
+            width: 400px;
+            height: auto;
+            transition: transform 0.3s ease;
+            
+             
+        }
+        #birthdayImage:hover {
+            transform: scale(1.1); /* Hover effect */
+        }
+    </style>
+</head>
+<body  bgcolor="pink">
+    <div style="text-align: center;">
+        <h1>Yeah, I think today is your birthday, right?</h1>
+        <button class="myb" onclick="checkBirthday()">Yes</button>
+        <h2>So, please enter your date of birth</h2>
+        <input type="text" id="date" placeholder="Enter date (dd-mm-yyyy)">
+    <button onclick="checkBirthday()">Submit</button>
+        <br><br><br><br>
+        
+
+
+        <!-- Image to display on button click -->
+      <center> <img id="birthdayImage" src="assets/mapic1.jpg" alt="Birthday Image"> </center> 
+    </div> <br><br><br>
+    
+   
+    
+   
+   
+   
+   <script>
+        function checkBirthday() {
+            const dateInput = document.getElementById('date').value;
+            const birthdayImage = document.getElementById('birthdayImage');
+            
+            // Check if the entered date is '11-02-2004'
+            if (dateInput === '11-02-2004') { 
+                window.location.href = "page2.html"; // Redirect to index.html
+            } else {
+                // Display the image if the date is incorrect
+                birthdayImage.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love</title>
+    <style>
+        /* Romantic Pink Gradient */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+            color: white;
+            text-align: center;
+        }
+
+        /* Container */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Love Letter Font */
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Special Text */
+        .special-text {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4d6d;
+        }
+
+        /* Floating Hearts Animation */
+        @keyframes float {
+            0% { transform: translateY(0); opacity: 1; }
+            100% { transform: translateY(-100px); opacity: 0; }
+        }
+
+        .hearts::after {
+            content: "❤️ 💕 💖 💗";
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            font-size: 30px;
+            animation: float 4s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Hi <i>Maa</i>, Wish you a <b>very Happy Birthday</b> 🎉💕</p>
+        <p>
+            Have a great day! Enjoy every single moment in your life.  
+            Learn from both the <b>good</b> and <b>bad</b> situations, but always stay happy.  
+            <b>Be careful, Maa.</b>  
+            <i>I'm always with you in every situation.</i> ❤️
+        </p>
+        <p>
+            Mana college life lo <b>1st year</b> - nuv evaro koda Naku theleyadhu.  
+            <i>Birthday roju Naku chocolate ichanu annav, but adhi Naku gurtu ledhu
+                . a year last lo parichayam ayenavu.</i>  
+            <b>2nd year lo</b> - friend ga wish chesa. a year lo nuv love accept chesavu💕.  
+            <b>3rd year ki</b> - manam partners ga unnaam 👫.  
+            <i>Next year ki manam oka family 👨‍👩‍👧‍👦ga undham undali koda maa.</i> 🥰  
+        </p>
+        <p>
+            I love you ani daily cheppaleka povachu,  
+            Kani <b>na manasulo each and every minute nuv untavu</b> ❤️.
+            <b>Nuv a roju Naku nuv cheppakapothey eroju varaku Koda neku nenu cheppevadini kadhu..</b> 
+             <i>Nuv Naku chala special ayenavu ra entha ante cheppalenu</i>
+            Nuv naatho thappu , inka evaritho matladina Naku nachadhu.
+            nuv naku chala  special
+            <i>Nuv natho matladali, natho undali...</i>  
+            Chinna <b>psycho thanam</b>, but I love you for that. 🥹  
+        </p>
+        <p>
+            Ippudu nenu Ela unna na situation Ela undi antha neku telusu kani
+            Mana pelli tarvatha ninnu <b>baga chooskuntanu</b> Maa,  
+            Aa namakam Naku undi, aa namakam niku isthanu. 💖  
+            <i>E roju neku gift ivvali ani anukuna...</i>  
+            eroju neku machi  gift idham annukuna kani eroju neku 
+            gift ivataniki Koda nakada money levu neku ivvali ante 
+            ni money neke gift ivali ledhu ante intlo adagali andhukey
+            em ivaledhu Naku nachadhu Koda andhukey  ani<b> naku e technology tho</b> 
+            idhi chesanu 2 mins ayeana nuv happy feel avuthavu ani.  
+        </p>
+        <p class="special-text">I <i>love you</i> Maa, ippudu appudu Koda elane <b>premistha!</b> ❤️</p>
+    </div>
+
+    <div class="hearts"></div>
+
+    <script>
+        // Floating hearts effect
+        setInterval(() => {
+            let heart = document.createElement("div");
+            heart.innerHTML = "❤️";
+            heart.style.position = "fixed";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.bottom = "-10px";
+            heart.style.fontSize = Math.random() * 30 + 10 + "px";
+            heart.style.opacity = 0.7;
+            heart.style.animation = "float 3s linear";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 3000);
+        }, 800);
+    </script>
+</body>
+</html>
